@@ -1,12 +1,34 @@
 {
   "name": "sukusuku",
   "version": "1.0.0",
-  "description": "",
+  "description": "react, redux, babel, webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config webpack.develop.js",
+    "build": "webpack --config webpack.product.js --progress",
+    "prebuild": "rimraf dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.24.1",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.0-rc.1",
+    "webpack-dev-server": "^2.2.0-rc.0",
+    "webpack-merge": "^2.0.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.20.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
 }
