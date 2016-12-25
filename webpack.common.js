@@ -14,7 +14,17 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
-      { test: /\.css$/, include: /app/, loader: 'style-loader!css-loader' }
+      {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico|webp)$/,
+        loader: 'file?name=assets/[name].[hash].[ext]'
+      },
+      { test: /\.css$/,
+        include: /node_modules/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader'
+        })
+      }
     ]
   },
 
