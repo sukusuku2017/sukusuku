@@ -13,7 +13,7 @@ module.exports = {
 
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, use: 'babel-loader' },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico|webp)$/,
         loader: 'file?name=assets/[name].[hash].[ext]'
