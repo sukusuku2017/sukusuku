@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
   entry: {
-    'main': './app/app.js',
+    'main': './app/index.js',
     'vendor': './app/vendor.js',
     'polyfill': './app/polyfill.js'
   },
