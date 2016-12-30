@@ -16,7 +16,7 @@ class Root extends Component {
         <Router history={hashHistory}>
           <Route path="/" component={SukusukuApp}>
             <IndexRoute component={Home} />
-            <Route path="list" component={List}/>
+            <Route path="list/:chapter" component={List}/>
           </Route>
         </Router>
       </Provider>
