@@ -6,9 +6,17 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
   entry: {
-    'main': './app/index.js',
+    'main': './app/main.js',
     'vendor': './app/vendor.js',
     'polyfill': './app/polyfill.js'
+  },
+
+  resolve: {
+    alias: {
+      actions:     path.resolve(__dirname, './app/actions/'),
+      components:  path.resolve(__dirname, './app/components/'),
+      stores:      path.resolve(__dirname, './app/stores/'),
+    }
   },
 
   module: {

@@ -27,7 +27,8 @@ module.exports = webpackMerge(commonConfig, {
   ],
 
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
+    contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'data')],
     compress: true,
     port: 8080
   }
