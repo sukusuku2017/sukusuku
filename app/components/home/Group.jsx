@@ -11,18 +11,13 @@ class Group extends Component {
           {chapter}과 단어
           <div className="float-xs-right">
             <Link className="btn btn-outline-danger btn-sm"
-                to={`/list/${chapter}`}>
+                to={`/list/ch${chapter}`}>
               리스트
             </Link>
             {' '}
             <Link className="btn btn-outline-danger btn-sm"
-                to={`/card/${chapter}`}>
+                to={`/card/ch${chapter}`}>
               카드
-            </Link>
-            {' '}
-            <Link className="btn btn-outline-danger btn-sm"
-                to={`/test/${chapter}`}>
-              테스트
             </Link>
           </div>
         </li>

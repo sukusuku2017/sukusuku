@@ -6,7 +6,7 @@ import {
   RECEIVE_WORDS
 } from '../actions/list'
 
-function selectedChapter(state = 'ch13', action) {
+function selectedChapter(state = 'ch1', action) {
   switch (action.type) {
     case SELECT_CHAPTER:
       return action.chapter
@@ -17,23 +17,16 @@ function selectedChapter(state = 'ch13', action) {
 
 function words(state = {
   isFetching: false,
-  didInvalidate: false,
   items: []
 }, action) {
   switch (action.type) {
-    case INVALIDATE_WORDS:
-      return Object.assign({}, state, {
-        didInvalidate: true
-      })
     case REQUEST_WORDS:
       return Object.assign({}, state, {
         isFetching: true,
-        didInvalidate: false
       })
     case RECEIVE_WORDS:
       return Object.assign({}, state, {
         isFetching: false,
-        didInvalidate: false,
         displayMode: 'ALL',
         items: action.words,
         lastUpdated: action.receivedAt
@@ -45,7 +38,6 @@ function words(state = {
 
 function wordsByChapter(state = {}, action) {
   switch (action.type) {
-    case INVALIDATE_WORDS:
     case RECEIVE_WORDS:
     case REQUEST_WORDS:
       return Object.assign({}, state, {

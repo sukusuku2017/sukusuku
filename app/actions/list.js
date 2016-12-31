@@ -8,11 +8,11 @@ export function selectChapter(chapter) {
   }
 }
 
-export const INVALIDATE_WORDS = 'INVALIDATE_WORDS'
-export function invalidateWords(chapter) {
+export const SELECT_DISPLAY_MODE = 'SELECT_DISPLAY_MODE'
+export function selectDisplayMode(mode) {
   return {
-    type: INVALIDATE_WORDS,
-    chapter
+    type: SELECT_DISPLAY_MODE,
+    mode
   }
 }
 
@@ -52,8 +52,6 @@ function shouldFetchWords(state, chapter) {
     return true
   } else if (words.isFetching) {
     return false
-  } else {
-    return words.didInvalidate
   }
 }
 
