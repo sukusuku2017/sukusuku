@@ -34,6 +34,7 @@ function words(state = {
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
+        displayMode: 'ALL',
         items: action.words,
         lastUpdated: action.receivedAt
       })

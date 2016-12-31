@@ -32,20 +32,18 @@ class Group extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6 my-2">
-            <h4>기초일본어 1코스</h4>
-            <ul className="list-group">
-              {this.renderListGroup(_.range(1, 11))}
-            </ul>
-          </div>
-          <div className="col-md-6 my-2">
-            <h4>기초일본어 2코스</h4>
-            <ul className="list-group">
-              {this.renderListGroup(_.range(11, 21))}
-            </ul>
-          </div>
+      <div className="row">
+        <div className="col-md-6 my-2">
+          <h4>기초일본어 1코스</h4>
+          <ul className="list-group">
+            {this.renderListGroup(_.range(1, 11))}
+          </ul>
+        </div>
+        <div className="col-md-6 my-2">
+          <h4>기초일본어 2코스</h4>
+          <ul className="list-group">
+            {this.renderListGroup(_.range(11, 21))}
+          </ul>
         </div>
       </div>
     )

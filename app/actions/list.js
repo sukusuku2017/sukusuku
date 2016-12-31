@@ -42,7 +42,7 @@ export function fetchWords(chapter) {
 
     return fetch(`/api/${chapter}.json`)
       .then(response => response.json())
-      .then(json => dispatch(receiveWords(chapter, json)));
+      .then(json => dispatch(receiveWords(chapter, json)))
   }
 }
 

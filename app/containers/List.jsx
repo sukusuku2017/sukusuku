@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
 import { selectChapter, fetchWordsIfNeeded, invalidateWords } from '../actions/list'
+import Buttons from 'components/list/Buttons.jsx'
+import Group from 'components/list/Group.jsx'
 
 class List extends Component {
 
@@ -36,11 +38,17 @@ class List extends Component {
   }
 
   render() {
-    const { selectedChapter, words, isFetching, lastUpdated } = this.props
+    const { selectedChapter, words, isFetching, lastUpdated, displayMode } = this.props
 
     return (
       <div>
-        <h1>스쿠스쿠</h1>
+        <h1>과</h1>
+        <Buttons mode={displayMode}/>
+        {
+          words.map((content, index) => (
+            <Group content={content} key={index}></Group>
+          ))
+        }
       </div>
     )
   }
@@ -59,6 +67,7 @@ function mapStateToProps(state) {
   const {
     isFetching,
     lastUpdated,
+    displayMode,
     items: words
   } = wordsByChapter[selectedChapter] || {
     isFetching: true,
@@ -69,7 +78,8 @@ function mapStateToProps(state) {
     selectedChapter,
     words,
     isFetching,
-    lastUpdated
+    lastUpdated,
+    displayMode
   }
 }
 
