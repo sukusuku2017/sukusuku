@@ -1,0 +1,128 @@
+{
+  "chapter": "ch13",
+  "content": [
+    {
+      "name": "단어",
+      "words": [
+        {
+          "mean": "다음 주",
+          "characters": [
+            {
+              "base": "来",
+              "ruby": "らい",
+              "mean": "올 래"
+            },
+            {
+              "base": "週",
+              "ruby": "しゅう",
+              "mean": "주일 주"
+            }
+          ]
+        },
+        {
+          "mean": "사다",
+          "characters": [
+            {
+              "base": "買",
+              "ruby": "か",
+              "mean": "살 매"
+            },
+            {
+              "base": "う"
+            }
+          ]
+        },
+        {
+          "mean": "아직",
+          "characters": [
+            {
+              "base": "まだ"
+            }
+          ]
+        },
+        {
+          "mean": "~을/를 타다",
+          "characters": [
+            {
+              "base": "〜に"
+            },
+            {
+              "base": "乗",
+              "ruby": "の",
+              "mean": "탈 승"
+            },
+            {
+              "base": "る"
+            }
+          ]
+        },
+        {
+          "mean": "쇼핑",
+          "characters": [
+            {
+              "base": "買",
+              "ruby": "か",
+              "mean": "살 매"
+            },
+            {
+              "base": "い"
+            },
+            {
+              "base": "物",
+              "ruby": "もの",
+              "mean": "물건 물"
+            }
+          ]
+        },
+        {
+          "base": "明日",
+          "ruby": "あした",
+          "mean": "내일",
+          "characters": [
+            {
+              "base": "明",
+              "mean": "밝을 명"
+            },
+            {
+              "base": "日",
+              "mean": "날 일"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "い형용사",
+      "words": [
+        {
+          "mean": "덥다",
+          "characters": [
+            {
+              "base": "暑",
+              "ruby": "あつ",
+              "mean": "더울 서"
+            },
+            {
+              "base": "い"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "위치명사",
+      "words": [
+        {
+          "mean": "위",
+          "characters": [
+            {
+              "base": "上",
+              "ruby": "うえ",
+              "mean": "윗 상"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

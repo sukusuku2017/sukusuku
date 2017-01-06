@@ -12,10 +12,17 @@ class List extends Component {
   }
 
   componentDidMount() {
-    const { dispatch } = this.props
+    const { dispatch, selectedChapter } = this.props
     const chapter = this.props.routeParams.chapter
     dispatch(selectChapter(chapter))
     dispatch(fetchWordsIfNeeded(chapter))
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedChapter !== this.props.selectedChapter) {
+      const { dispatch, selectedChapter } = nextProps
+      dispatch(fetchWordsIfNeeded(selectedChapter))
+    }
   }
 
   render() {
